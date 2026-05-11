@@ -26,13 +26,13 @@ What do you want to do? add, subtract, divide or multiply? """)
             print(random.choice(add_quotes))
             ops("add")
         case "subtract":
-            random.choice(sub_quotes)
+            print(random.choice(sub_quotes))
             ops("minus")
         case "divide":
-            random.choice(div_quotes)
+            print(random.choice(div_quotes))
             ops("dive")
         case "multiply":
-            random.choice(mult_quotes)
+            print(random.choice(mult_quotes))
             ops("mult")
         
 def ops(operation):
