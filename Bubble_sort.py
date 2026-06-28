@@ -3,7 +3,7 @@ def bubble_sort(array):
   for i in range(x):
     sorted = False
     for j in range(0, x - i - 1):
-      if array[j] < array[j+1]:
+      if array[j] > array[j+1]:
         array[j], array[j+1] = array[j+1],array[j]
         print(array)
         sorted = True
