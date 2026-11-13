@@ -7,6 +7,9 @@ deadword = ""
 
 search_words = ["search","look up", "google",]
 open_words = ["open","start",]
+app_codes = {"ff":"firefox", "dc":"discord", "":""} #shortening the words so you can enter it faster
+
+
 def fin(lis):
     global usage
     global deadword
@@ -33,14 +36,21 @@ def main():
     global usage
     global deadword
     usage = input("What do U want to do?\n>>> ")
+
+    #looking things up
     if fin(search_words):
         search = usage.split(deadword, 1)[1]
         firefox_and_lookup(search)
+
+    #opening apps
     elif fin(open_words):
-        app_to_open = usage.split(deadword, 1)[1]
+        app_to_open = str(usage.split(deadword, 1)[1])
+        for item in app_codes:
+            if app_to_open in item:
+                open_app(app_codes[item]) 
         open_app(app_to_open)
+
+
     if input("anything else? \n>>>").lower == "yeah":
         main()
-        
-    
-main()
+main()  
