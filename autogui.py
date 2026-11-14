@@ -45,9 +45,9 @@ def main():
     #opening apps
     elif fin(open_words):
         app_to_open = str(usage.split(deadword, 1)[1])
-        for item in app_codes:
-            if app_to_open in item:
-                open_app(app_codes[item]) 
+        app_to_open = app_to_open.strip()
+        if app_to_open in [app_to_open for app in app_codes.keys()]:
+            open_app(app_codes[app_to_open]) 
         open_app(app_to_open)
 
 
