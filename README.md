@@ -1,7 +1,7 @@
 This is a place for all my python projects;
 so far there is:
 - a binary search
-- -a json file reader and linear search
+- a json file reader and linear search
 - a text game
 - a random number game
 - a calculator
